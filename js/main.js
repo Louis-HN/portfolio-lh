@@ -1,31 +1,43 @@
-// src/js/main.js
+// ===== CORE CONFIG =====
+function setupTheme() {
+  document.body.classList.add('light-theme');
+}
+setupTheme();
 
-// 🔹 Core setup
-import './core/config.js'
-import './core/theme.js'
-import './core/init.js'
 
-// 🔹 UI interactions
-import { initProfileTabs } from './ui/toggleTabs.js';
+// ===== UI Interactions =====
+function initProfileTabs() {
+  const tabs = document.querySelectorAll('[data-tab]');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+    });
+  });
+}
 initProfileTabs();
 
-// 🔹 Charts
-import { renderMediaChart } from './charts/barChartMedia.js';
-import { renderDataChart } from './charts/barChartData.js';
-import { renderCRMChart } from './charts/barChartCRM.js';
 
+// ===== CHARTS =====
+function renderMediaChart() {
+  console.log('Media Chart Loaded');
+  // Chart.js code ici si présent
+}
+function renderDataChart() {
+  console.log('Data Chart Loaded');
+}
+function renderCRMChart() {
+  console.log('CRM Chart Loaded');
+}
 renderMediaChart();
 renderDataChart();
 renderCRMChart();
 
-// 🔹 Page-specific logic
-import './pages/resume.js'
-import './pages/index.js'
-import './pages/project.js'
-import './pages/research.js'
 
-
-
-
-
-
+// ===== PAGE-SPECIFIC LOGIC =====
+if (window.location.pathname.includes('resume.html')) {
+  console.log('Resume-specific JS');
+}
+if (window.location.pathname.includes('research.html')) {
+  console.log('Research-specific JS');
+}
