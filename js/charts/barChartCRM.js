@@ -1,8 +1,6 @@
-import Chart from 'chart.js/auto';
-
 let crmChart;
 
-export function renderCRMChart() {
+function renderCRMChart() {
   const ctx = document.getElementById('radarCRM')?.getContext('2d');
   if (!ctx) return;
 

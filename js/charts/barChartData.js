@@ -1,8 +1,6 @@
-import Chart from 'chart.js/auto';
-
 let dataChart;
 
-export function renderDataChart() {
+function renderDataChart() {
   const ctx = document.getElementById('barData')?.getContext('2d');
   if (!ctx) return;
 

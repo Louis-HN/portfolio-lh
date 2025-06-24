@@ -1,8 +1,4 @@
-import { renderMediaChart } from '../charts/barChartMedia.js';
-import { renderDataChart } from '../charts/barChartData.js';
-import { renderCRMChart } from '../charts/barChartCRM.js';
-
-export function initProfileTabs() {
+function initProfileTabs() {
   const tabs = document.querySelectorAll('.profile-tab');
   const contents = document.querySelectorAll('.profile-content');
   const graphics = document.querySelectorAll('.profile-graphic');
@@ -20,11 +16,9 @@ export function initProfileTabs() {
       graph.hidden = graph.dataset.profile !== profile;
     });
 
-    // Appelle les fonctions dynamiques
     if (profile === 'media') renderMediaChart();
     if (profile === 'data') renderDataChart();
     if (profile === 'crm') renderCRMChart();
-    
   };
 
   const defaultTab = document.querySelector('.profile-tab.active') || tabs[0];
