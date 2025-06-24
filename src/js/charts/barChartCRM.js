@@ -1,7 +1,6 @@
 import Chart from 'chart.js/auto';
 
 let crmChart;
-console.log("📊 renderMediaChart lancé");
 
 export function renderCRMChart() {
   const ctx = document.getElementById('radarCRM')?.getContext('2d');
