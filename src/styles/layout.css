@@ -1,0 +1,236 @@
+/* =============================
+   Layout – Mobile-First, Design System
+   ============================= */
+
+/* === Containers & Sections === */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+.section {
+  margin-block: var(--space-xxl) var(--space-xxxl);
+  padding-inline: var(--space-md);
+}
+
+/* === Layout Blocks === */
+.text-center {
+  text-align: center;
+}
+
+.text-block {
+  max-width: 700px;
+  margin: var(--space-xl) auto var(--space-lg);
+  text-align: left;
+  padding-inline: var(--space-md);
+}
+
+/* === Diagram Container === */
+#diagram-container {
+  width: 100%;
+  margin-top: var(--space-lg);
+  padding-inline: var(--space-md);
+}
+
+/* === Resume Container === */
+.resume-container {
+  max-width: 700px;
+  margin-block: var(--space-xxl) var(--space-xxxl);
+  padding-inline: var(--space-md);
+  padding-top: var(--space-xl);
+  padding-bottom: calc(var(--space-lg) + 60px);
+}
+
+/* === Sections avec bordure basse === */
+.resume-section {
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* === Sections sans bordure basse === */
+.resume-block {
+  padding-bottom: var(--space-md);
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.resume-entry {
+  margin-bottom: var(--space-md);
+  font-size: var (--font-base);
+}
+
+.resume-entry strong {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-base);
+  color: var(--color-heading);
+}
+
+.resume-entry p {
+  margin-block: 0.2rem var(--space-sm);
+  font-size: var(--font-base);
+}
+
+/* === Offset Utility === */
+.section-offset-top {
+  margin-top: var(--space-xxl);
+}
+
+
+/* =============================
+   Home page 
+============================= */
+
+//* ================================ */
+/* Homepage intro block             */
+/* ================================ */
+
+.hero-section {
+  max-width: 900px;
+  margin-left: ;
+  margin-right: ;
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+  padding-left: var(--space-md);   /* ajoute une petite marge à gauche/droite */
+  padding-right: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    max-width: 60ch; /* limite la longueur de la ligne */
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .cta-group {
+    display: flex;
+    gap: var(--space-lg); /* propre espace horizontal entre les boutons */
+    align-items: center;
+    margin-top: var(--space-sm);
+  }
+}
+
+
+
+/* =============================
+   Base Reset & Transition
+============================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-light-bg);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  line-height: var(--line-height-base);
+  opacity: 0;
+  animation: fadeIn 0.75s ease-out forwards;
+}
+
+/* Smooth reveal */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+
+/* ================================
+   Desktop Centered Layout (≥768px)
+=================================== */
+@media (min-width: 768px) {
+  .container,
+  .resume-container,
+  .resume-section,
+  .text-block {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container,
+  .resume-container {
+    padding-inline: var(--space-lg);
+  }
+
+  .resume-section {
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .text-block {
+    text-align: justify;
+    padding-inline: var(--space-md);
+  }
+}
+
+
+  
+/* =============================
+   Dark Mode
+============================= */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--color-dark-bg);
+    color: var(--color-text);
+  }
+
+  .resume-section {
+    border-color: var(--color-border);
+  }
+
+  .resume-entry strong {
+    color: var(--color-primary);
+  }
+}
+
+
+
+/* -- Responsive scaling (Tablet & Desktop) -- */
+
+@media (min-width: 600px) {
+  .resume-entry {
+  margin-bottom: var(--space-sm);
+}
+
+  .resume-entry strong {
+  font-size: 0.875rem; 
+  }
+
+.resume-entry p {
+  font-size: 0.875rem; 
+  }
+  .section {
+    padding-block: var(--space-lg);
+  }
+  .section-wrap {
+    padding-inline: var(--space-lg);
+  }
+}
+
+
+@media (min-width: 1024px) {
+    .resume-entry {
+  margin-bottom: var(--space-sm);
+}
+  
+  .resume-entry strong{
+  font-size: 0.875rem; 
+  }
+.resume-entry p {
+  font-size: 0.875rem; 
+  }
+  .section {
+    padding-block: 0px;
+  }
+  .section-wrap {
+    padding-inline: var(--space-lg);
+  }
+}

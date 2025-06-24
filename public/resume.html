@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume – Louis Henon</title>
+
+  <link rel="stylesheet" href="/src/styles/tokens.css" />
+  <link rel="stylesheet" href="/src/styles/layout.css" />
+  <link rel="stylesheet" href="/src/styles/typography.css" />
+  <link rel="stylesheet" href="/src/styles/components.css" />
+  <link rel="stylesheet" href="/src/styles/graphics.css" />
+</head>
+
+<body>
+  <main class="container resume-container">
+
+    <!-- Toolbar -->
+    <section class="section">
+    <div class="resume-toolbar">
+      <a href="index.html" class="back-button" aria-label="Back">
+        <svg class="back-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+      </a>
+
+      <a href="cv-louis-henon.pdf" class="download-button" download aria-label="Download resume">
+        <svg class="download-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <line x1="12" y1="3" x2="12" y2="15" />
+          <polyline points="6 11 12 17 18 11" />
+          <line x1="4" y1="22" x2="20" y2="22" />
+        </svg>
+      </a>
+    </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="resume-block">
+      <div class="status-badge">Open to work! <span class="status-indicator"></span></div>
+      <h1 class="resume-title">Louis Henon</h1>
+      <p class="resume-sub">Marketing Data-Driven</p>
+      <p class="body-text">
+       Experienced Marketing Manager with 3 years of experience and a degree in Marketing from a Business School. I am looking to grow within a dynamic team that thrives on media and marketing analytics. I am passionate about developing campaign strategies, monitoring performance and using data to make smart decisions. Proactive, fast-learning and results-oriented, I also have aninterest in advanced techniques such as text mining, sentiment analysis, real-time bidding and campaign optimization.
+      </p>
+    </section>
+
+    <!-- Profile Toggle -->
+    <section class="resume-section">
+      <h2 class="resume-sub">Junior profile</h2>
+      <div class="profile-switch">
+        <button class="profile-tab active" data-profile="media">Media Analyst</button>
+        <button class="profile-tab" data-profile="data">Programming & Data Analyst</button>
+        <button class="profile-tab" data-profile="crm">CRM Analyst</button>
+      </div>
+    </section>
+
+    <!-- Graphics -->
+    <section class="resume-section">
+      <h2 class="resume-sub">Graphic</h2>
+        <canvas class="profile-graphic" id="radarMedia" data-profile="media"></canvas>
+        <canvas class="profile-graphic" id="barData" data-profile="data" hidden></canvas>
+        <canvas class="profile-graphic" id="radarCRM" data-profile="crm" hidden></canvas>
+    </section>
+
+
+    <!--- Skills --->
+<section class="resume-section">
+  <h2 class="resume-sub">Skills</h2>
+
+  <!-- Skills : Media Analyst -->
+  <div class="profile-content" data-profile="media">
+    <div class="resume-entry">
+      <strong>Campaign setup</strong>
+      <p>(Google Ads – Search, Display, YouTube, Meta Ads, DV360). Junior in pacing, budget allocation, ad scheduling, A/B testing and real-time adjustments.</p>
+    </div>
+    <div class="resume-entry">
+      <strong>Audience segmentation</strong>
+      <p>Conduct granular segmentation using first and third-party data, build retargeting strategies to maximize ROI and leverage lookalike audiences to scale.</p>
+    </div>
+    <div class="resume-entry">
+      <strong>Performance evaluation</strong>
+      <p>Build and maintain performance dashboards using Looker Studio. Calculate ROAS, CPC, CPA, implement attribution modeling and generate actionable optimization.</p>
+    </div>
+  </div>
+
+  <!-- Skills : Data Analyst -->
+  <div class="profile-content" data-profile="data" hidden>
+    <div class="resume-entry">
+      <strong>SQL (Junior)</strong>
+      <p>Essential for extracting, transforming and analyzing structured marketing data from databases; enables efficient manipulation and integration of large datasets, preferred over Excel for scalability and automation.</p>
+    </div>
+    <div class="resume-entry">
+      <strong>Python (Junior)</strong>
+      <p>Used to clean, process and analyze data via libraries like Pandas and NumPy. Facilitates scripting for tasks like web scraping, API integration and automation of marketing data pipelines.</p>
+    </div>
+    <div class="resume-entry">
+      <strong>Data Analysis (Junior)</strong>
+      <p>Experienced in cleaning, modeling and visualizing marketing data to uncover insights. Skilled at identifying trends and patterns to support informed campaign and CRM strategies.</p>
+    </div>
+  </div>
+
+  <!-- Skills : CRM Analyst -->
+  <div class="profile-content" data-profile="crm" hidden>
+    <div class="resume-entry">
+      <strong>CRM SaaS</strong>
+      <p>Proficient with platforms like Brevo and SAP CRM, managing lead and customer pipelines.</p>
+    </div>
+    <div class="resume-entry">
+      <strong>Customer segmentation</strong>
+      <p>Proficient at designing scoring models (explicit + implicit + behavioral data) running cluster analyses, scoring leads to prioritize sales opportunities.</p>
+    </div>
+    <div class="resume-entry">
+      <strong>Marketing automation</strong>
+      <p>Build and monitor automated workflows and customer journeys (email flows, drip campaigns) to nurture and convert leads.</p>
+    </div>
+  </div>
+</section>
+
+<!--- Work --->
+<section class="resume-section">
+  <h2 class="resume-sub">Work</h2>
+
+  <!-- Work : Media Analyst -->
+  <div class="profile-content" data-profile="media">
+    <div class="resume-entry">
+      <strong>Search Campaign</strong>
+      <p>Launched a niche B2B Google Search campaign on a modest €300/month budget. I handled everything, from keyword research and campaign setup to pausing underperformers and bid adjustments. The campaign consistently generated 4–6 qualified leads per month, with CPLs around €50–75, right in line with industry benchmarks for B2B search (~3% conversion rate, average CPC €2–3).</p>
+      <p><strong>Funnel sales:</strong>Search Ads / Website account (Lead) / Direct or online deal closure (Client).</p>
+    </div>
+  </div>
+
+  <!-- Work : Data Analyst -->
+  <div class="profile-content" data-profile="data" hidden>
+    <div class="resume-entry">
+      <strong>Sales Analysis</strong>
+      <p>Executed exploratory analysis on sales pipelines (2016–2020) using descriptive statistics and visualizations to identify top product categories and regional trends, supporting inventory and marketing adjustments.</p>
+    </div>
+  </div>
+
+  <!-- Work : CRM Analyst -->
+  <div class="profile-content" data-profile="crm" hidden>
+    <div class="resume-entry">
+      <strong>CRM Workflow and Insights</strong>
+      <p>Built CRM attributes around account creation, loyalty program enrollment, purchase activity and frequency. Designed and deployed transactional email workflows—for account creation, order confirmation, delivery tracking and customer support inquiries with Brevo (Sendinblue). Established a simple customer satisfaction scoring system tied to the end-to-end order journey, enabling targeted follow-ups and insights.</p>
+    </div>
+  </div>
+</section>
+
+<!--- Certifications --->
+<section class="resume-section">
+  <h2 class="resume-sub">Certifications</h2>
+
+  <!-- Certification : Media Analyst -->
+  <div class="profile-content" data-profile="media">
+    <div class="resume-entry"><strong>Google Ads, Google Analytics 4 and Google Marketing Plateforms</strong><p>Certified in June 2025.</p></div>
+    <div class="resume-entry"><strong>Google Digital Marketing & E-commerce Professional</strong><p>Certified in June 2025.</p></div>
+    <div class="resume-entry"><strong>Meta Social Media Marketing Professional</strong><p>Certified in June 2025.</p></div>
+    <div class="resume-entry"><strong>TikTok Media Buying Certification</strong><p>In progress.</p></div>
+    <div class="resume-entry"><strong>Programmatic Advertising</strong><p>In progress.</p></div>
+  </div>
+
+  <!-- Certification : Data Analyst -->
+  <div class="profile-content" data-profile="data" hidden>
+    <div class="resume-entry"><strong>Meta Marketing Analytics</strong><p>In progress (Framework OSEMN, SQL, Python, Sheets and dashboards).</p></div>
+    <div class="resume-entry"><strong>Foundations of Business and Marketing analytics</strong><p>In progress (Statistics, R, data analysis techniques like regression, classification and clustering).</p></div>
+    <div class="resume-entry"><strong>Certificate in Applied Computer Science</strong><p>September, evening classes (Programmation and data structure).</p></div>
+  </div>
+
+  <!-- Certification : CRM Analyst -->
+  <div class="profile-content" data-profile="crm" hidden>
+    <div class="resume-entry"><strong>Salesforces Sales and CRM Overview</strong><p>In progress (quality data, sales process).</p></div>
+    <div class="resume-entry"><strong>SAP Business Analyst Professional</strong><p>In progress (process modeling, strategic analysis).</p></div>
+    <div class="resume-entry"><strong>Braze Technical Architect</strong><p>In progress (SDK integration, REST API, attributes, tracking events).</p></div>
+  </div>
+</section>
+
+    <!-- Contact -->
+    <section class="resume-block">
+      <p class="body-text">French based in Montreal, Canada.</p>
+      <div class="cta-group">
+        <a href="mailto:louishen@hotmail.fr" class="link">
+          Contact me by email
+          <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7" />
+            <path d="M7 7h10v10" />
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

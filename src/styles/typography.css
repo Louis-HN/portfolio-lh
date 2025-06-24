@@ -1,0 +1,132 @@
+/* -- Typography / Layout — Mobile First 
+
+- Responsive graphic bar 
+- Design the toolbar elements
+- Make the home page 
+
+- Generale UX/UI coherence 
+
+-- */
+
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding-inline: var(--space-md);
+  margin-inline: auto;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-heading);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-sm);
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-heading);
+  margin-bottom: var(--space-md);
+}
+
+.body-text {
+  font-size: var(--font-base);
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+}
+
+.resume-title {
+  font-size: var(--font-xxl);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-heading);
+  margin-bottom: var(--space-sm);
+}
+
+.resume-sub {
+  font-size: 1.3rem;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+/* -- Responsive scaling (Tablet & Desktop) -- */
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .intro-text {
+    font-size: 1.1rem;
+  }
+
+  .resume-title{
+    font-size: 1.3rem;
+  }
+
+  .resume-sub {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: var(--font-size-md);
+  }
+
+  .body-text {
+  font-size: 0.875rem;
+  }
+
+  .container {
+    padding-inline: var(--space-lg);
+  }
+}
+ 
+
+@media (min-width: 1024px) {
+  .container {
+    padding-inline: var(--space-xl);
+  }
+
+  .intro-text {
+    font-size: 1.1rem;
+  }
+
+   .body-text {
+  font-size: 0.875rem;
+  }
+
+  .resume-title{
+    font-size: 1.3rem;
+  }
+
+  .resume-sub {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,276 @@
+/* ==========================================================================
+   Components UI - Buttons, Tabs, Toolbar, Graphics, Badges, etc.
+   ========================================================================== */
+
+/* ===============================
+   CTA Link Button
+================================== */
+a.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: var(--font-base);
+  font-weight: 500;
+  transition: var(--transition-default);
+}
+
+a.link:hover {
+  color: var(--color-primary);
+  background-color: var(--color-primary-bg);
+  border-radius: var(--radius-sm);
+  padding: var(--space-xs) var(--space-sm);
+  transform: translateY(-1px);
+  text-shadow: 0 0 4px rgba(0, 122, 255, 0.15);
+}
+
+.link-icon {
+  transition: transform 0.25s ease;
+  transform: translateY(1px);
+}
+
+a.link:hover .link-icon {
+  transform: translate(2px, -2px);
+  filter: drop-shadow(0 0 3px rgba(0, 122, 255, 0.2));
+}
+
+.resume-button {
+  margin-left: var(--space-lg);
+}
+
+
+/* ===============================
+   Toolbar Floating Desktop
+================================== */
+.resume-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.resume-toolbar {
+  position: fixed;
+  top: var(--space-xl);
+  left: calc(48% - 360px - 48px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 0 var(--space-sm);;
+  background: none;
+  border-right: 1px solid rgba(0, 0, 0, 0.08); /* séparation subtile */
+  z-index: 1000;
+}
+
+
+/* Taille des icônes */
+.resume-toolbar svg {
+  width: 25px;
+  height: 25px;
+  stroke: var(--color-text);      /* pour uniformiser la couleur */
+  stroke-width: 1.5; 
+}
+
+
+/* ===============================
+   Floating Toolbar Mobile (Glassmorphism)
+================================== */
+@media (max-width: 768px) {
+  .resume-toolbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: var(--space-sm) var(--space-md);
+
+    background-color: var(--glass-bg);
+    backdrop-filter: var(--blur-glass);
+    border-top: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    z-index: 999;
+  }
+}
+
+/* ===============================
+   Back + Download Button (Icon)
+================================== */
+.back-button,
+.download-button {
+  display: inline-block;
+  padding: var(--space-xs);
+  color: var(--color-text);
+  text-decoration: none;
+  line-height: 1;
+  transition: var(--transition-default);
+}
+
+.back-icon,
+.download-icon {
+  width: 1.5em;
+  height: 1.5em;
+  stroke: var(--color-text);
+  transition: transform 0.25s ease;
+}
+
+.back-button:hover,
+.download-button:hover {
+  color: var(--color-primary);
+}
+
+.back-button:hover .back-icon {
+  transform: translateX(-4px);
+  stroke: var(--color-primary);
+  filter: drop-shadow(0 0 3px rgba(0, 122, 255, 0.2));
+}
+
+.download-button:hover .download-icon {
+  transform: translateY(4px);
+  stroke: var(--color-primary);
+  filter: drop-shadow(0 0 3px rgba(0, 122, 255, 0.2));
+}
+
+
+/* ===============================
+   Status Badge
+================================== */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-badge);
+  background-color: var(--color-badge-bg);
+  border-radius: var(--radius-md);
+  padding: var(--space-xxs) var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  background-color: #198754;
+  border-radius: 50%;
+  box-shadow: 0 0 4px #198754;
+}
+
+
+/* ===============================
+   Profile Tabs Toggle
+================================== */
+.profile-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  width: 100%;
+}
+
+.profile-tab {
+  background: none;
+  color: var(--color-text-muted);
+  padding: 0.5rem 0.75rem 1rem 0;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.profile-tab.active {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* Mobile-specific scroll swipe */
+.profile-switch {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-inline: var(--space-md);
+    padding-bottom: var(--space-xs);
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    mask-image: linear-gradient(to right, black 85%, transparent); /* Fade effet visuel */
+    scrollbar-width: none; /* Cacher scrollbar */
+    -ms-overflow-style: none; /* Cacher scrollbar */
+  }
+
+  .profile-switch::-webkit-scrollbar {
+    display: none;
+  }
+
+/* ===============================
+   Section Divider
+================================== */
+.hr-divider {
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  margin: var(--space-lg) 0;
+}
+
+
+/* -- Darkmode -- */
+
+
+@media (prefers-color-scheme: dark) {
+  .resume-toolbar {
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
+
+
+
+/* -- Responsive scaling (Tablet & Desktop) -- */
+
+@media (min-width: 600px) {
+  .status-badge {
+  font-size: 13px; 
+}
+a.link {
+  font-size: 0.875rem;
+}
+a.link:hover {
+  padding: var(--space-xxxs) var(--space-xs);
+}
+
+.profile-tab:hover {
+    color: var(--color-text);
+  }
+
+.profile-switch {
+    padding-inline: 0;
+}
+}
+
+
+@media (min-width: 1024px) {
+  .status-badge {
+  font-size: 13px; 
+}
+
+a.link {
+  font-size: 0.875rem;
+}
+a.link:hover {
+  padding: var(--space-xxxs) var(--space-xs);
+}
+
+.profile-tab:hover {
+    color: var(--color-text);
+  }
+
+.profile-switch {
+    padding-inline: 0;
+}
+}
