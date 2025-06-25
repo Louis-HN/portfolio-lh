@@ -176,7 +176,7 @@ a.link:hover .link-icon {
   padding: 0.5rem 0.75rem 1rem 0;
   border: none;
   border-radius: var(--radius-sm);
-  font-size: 1rem;
+  font-size: var(--font-lg);
   font-weight: 400;
   cursor: pointer;
   transition: color 0.2s ease;
@@ -239,7 +239,9 @@ a.link {
 a.link:hover {
   padding: var(--space-xxxs) var(--space-xs);
 }
-
+.profile-tab {
+    font-size: var(--font-md);
+}
 .profile-tab:hover {
     color: var(--color-text);
   }
@@ -260,6 +262,10 @@ a.link {
 }
 a.link:hover {
   padding: var(--space-xxxs) var(--space-xs);
+}
+
+.profile-tab {
+    font-size: var(--font-md);
 }
 
 .profile-tab:hover {

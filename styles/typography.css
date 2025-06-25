@@ -49,7 +49,7 @@ p {
 }
 
 .resume-sub {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: var(--font-weight-normal);
   color: var(--color-text-muted);
   margin-bottom: var(--space-sm);

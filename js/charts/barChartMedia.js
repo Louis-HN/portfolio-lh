@@ -59,6 +59,7 @@ function renderMediaChart() {
       },
       plugins: {
         legend: { display: false }
+        
       }
     }
   });
