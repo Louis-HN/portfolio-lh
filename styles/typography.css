@@ -1,14 +1,5 @@
 
-/* -- Typography / Layout — Mobile First -- */
-
-.container {
-  width: 100%;
-  max-width: 1200px;
-  padding-inline: var(--space-md);
-  margin-inline: auto;
-}
-
-
+/* -- Mobile First -- */
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-base);
@@ -37,8 +28,8 @@ p {
   margin-bottom: var(--space-sm);
 }
 
-.intro-text {
-  font-size: 1.1rem;
+.intro-title {
+  font-size: 1.4rem;
   font-weight: var(--font-weight-normal);
   color: var(--color-heading);
   margin-bottom: var(--space-md);
@@ -66,7 +57,7 @@ p {
 
 /* -- Responsive scaling (Tablet & Desktop) -- */
 
-@media (min-width: 600px) {
+@media (min-width: 600px) { /* -- Tablet -- */
   h1 {
     font-size: 2.4rem;
   }
@@ -101,7 +92,7 @@ p {
 }
  
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) { /* -- Descktop -- */
   .container {
     padding-inline: var(--space-xl);
   }
@@ -121,4 +112,7 @@ p {
   .resume-sub {
     font-size: 1rem;
   }
+  .intro-title {
+  font-size: 1.2rem;
+}
 }

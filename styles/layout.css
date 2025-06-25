@@ -1,8 +1,14 @@
-/* =============================
-   Layout – Mobile-First, Design System
-   ============================= */
+/* -- Mobile-First -- */
 
-/* === Containers & Sections === */
+/* === Containers === */
+
+.home-container {
+  width: 100%;
+  max-width: 1200px;
+  padding-inline: var(--space-md);
+}
+
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -80,38 +86,25 @@
 }
 
 
-/* =============================
-   Home page 
-============================= */
-
-//* ================================ */
-/* Homepage intro block             */
-/* ================================ */
+/* -- Home page --- */
 
 .hero-section {
-  max-width: 900px;
-  margin-left: ;
-  margin-right: ;
+  max-width: 700px;
+  margin-left: 0;
+  margin-right: 0;
   padding-top: var(--space-xl);
-  padding-bottom: var(--space-xl);
-  padding-left: var(--space-md);   /* ajoute une petite marge à gauche/droite */
-  padding-right: var(--space-md);
+  padding-bottom: var(--space-xxl);
+  padding-left: 0;
+  padding-right: 0;
 }
-
-@media (min-width: 768px) {
-  .hero-section {
-    max-width: 60ch; /* limite la longueur de la ligne */
-    padding-left: 0;
-    padding-right: 0;
-  }
 
   .cta-group {
-    display: flex;
-    gap: var(--space-lg); /* propre espace horizontal entre les boutons */
-    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    align-items: left;
     margin-top: var(--space-sm);
   }
-}
 
 
 
@@ -196,6 +189,9 @@ body {
 /* -- Responsive scaling (Tablet & Desktop) -- */
 
 @media (min-width: 600px) {
+  .home-container {
+  padding-left: var(--space-lg);
+}
   .resume-entry {
   margin-bottom: var(--space-sm);
 }
@@ -213,18 +209,23 @@ body {
   .section-wrap {
     padding-inline: var(--space-lg);
   }
+  .cta-group {
+    flex-direction: row;
+  }
 }
 
 
 @media (min-width: 1024px) {
+.home-container {
+  padding-left: var(--space-xl);
+}
     .resume-entry {
   margin-bottom: var(--space-sm);
 }
-  
   .resume-entry strong{
   font-size: 0.875rem; 
   }
-.resume-entry p {
+  .resume-entry p {
   font-size: 0.875rem; 
   }
   .section {
@@ -232,5 +233,21 @@ body {
   }
   .section-wrap {
     padding-inline: var(--space-lg);
+  }
+
+  .home-section {
+    padding-left: var(--space-xl); /* -- TEST -- */
+  }
+
+  .home-skills-section {
+    padding-left: var(--space-xl);
+    font-size: 1rem; /* -- TEST -- */
+  }
+  .sub-title {
+    padding-left: var(--space-xl); /* -- TEST -- */
+    font-size: 1rem;
+  }
+  .cta-group {
+    flex-direction: row;
   }
 }
