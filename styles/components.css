@@ -51,7 +51,7 @@ a.link:hover .link-icon {
 .resume-toolbar {
   position: fixed;
   top: var(--space-xl);
-  left: calc(48% - 360px - 48px);
+  left: calc(48% - 320px - 26px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -248,6 +248,10 @@ a.link:hover {
 
 .profile-switch {
     padding-inline: 0;
+}
+
+.resume-toolbar {
+  left: calc(48% - 340px - 26px); /* -- Specifique tablette -- */
 }
 }
 

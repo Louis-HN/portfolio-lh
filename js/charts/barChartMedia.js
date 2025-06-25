@@ -11,7 +11,7 @@ function renderMediaChart() {
       labels: ['Search & Display', 'Social Media', 'Programmatic', 'Campaign Pacing', 'KPI Reporting'],
       datasets: [{
         type: 'bar',
-        label: 'Level now',
+        label: 'Niveau actuel',
         data: [5, 6, 4, 5, 7],
         backgroundColor: [
           'rgba(255, 160, 120, 0.2)',
@@ -58,8 +58,12 @@ function renderMediaChart() {
         }
       },
       plugins: {
-        legend: { display: false }
-        
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#1c1c1e',
+          titleColor: '#fff',
+          bodyColor: '#eee'
+        }
       }
     }
   });
