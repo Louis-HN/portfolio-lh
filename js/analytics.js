@@ -1,5 +1,4 @@
 // /js/analytics.js
-import { Analytics } from '@vercel/analytics/react';
 
 // Pour HTML vanilla, on utilise la version browser
 window.va = window.va || function () { 
@@ -11,14 +10,31 @@ window.si = window.si || function () {
   (window.siq = window.siq || []).push(arguments); 
 };
 
-// Chargement du script Analytics
-const analyticsScript = document.createElement('script');
-analyticsScript.src = 'https://cdn.vercel-insights.com/v1/script.debug.js';
-analyticsScript.defer = true;
-document.head.appendChild(analyticsScript);
+// Injection Vercel Analytics
+function injectAnalytics() {
+  const analyticsScript = document.createElement('script');
+  analyticsScript.src = 'https://cdn.vercel-insights.com/v1/script.js';
+  analyticsScript.defer = true;
+  document.head.appendChild(analyticsScript);
+}
 
-// Chargement du script Speed Insights
-const speedScript = document.createElement('script');
-speedScript.src = 'https://cdn.vercel-insights.com/v1/speed-insights/script.debug.js';
-speedScript.defer = true;
-document.head.appendChild(speedScript);
+// Injection Speed Insights
+function injectSpeedInsights() {
+  const speedScript = document.createElement('script');
+  speedScript.src = 'https://cdn.vercel-insights.com/v1/speed-insights/script.js';
+  speedScript.defer = true;
+  document.head.appendChild(speedScript);
+}
+
+// Initialisation
+function initVercelInsights() {
+  injectAnalytics();
+  injectSpeedInsights();
+}
+
+// Auto-initialisation au chargement du DOM
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initVercelInsights);
+} else {
+  initVercelInsights();
+}
