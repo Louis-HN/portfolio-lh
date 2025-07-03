@@ -51,10 +51,10 @@ function renderCRMChart() {
   maintainAspectRatio: false, // IMPORTANT : permet d'utiliser une hauteur fixe
   layout: { 
     padding: {
-      top: 15,
-      right: 0,
-      bottom: 0,
-      left: 0
+      top: 30,
+      right: 20,
+      bottom: 20,
+      left: 20
     }
   },
   scales: {
