@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <title>Expertises</title>
+
+  <link rel="stylesheet" href="/styles/tokens.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="stylesheet" href="/styles/typography.css" />
+  <link rel="stylesheet" href="/styles/components.css" />
+  <link rel="stylesheet" href="/styles/graphics.css" />
+</head>
+
+<body>
+  <main class="container resume-container">
+
+    <!-- Toolbar -->
+    <section class="section">
+    <div class="resume-toolbar">
+      <a href="index.html" class="back-button" aria-label="Back">
+        <svg class="back-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+      </a>
+
+      
+    </section>
+
+    <!-- Intro -->
+    <section class="resume-block">
+      <div class="status-badge">Open to work! <span class="status-indicator"></span></div>
+      <h1 class="resume-title">Louis Henon</h1>
+      <p class="resume-sub">Marketing orienté données</p>
+      <p class="body-text">
+      Avec 4 ans d'expérience en tant que Marketing Manager et un diplôme d'école de commerce, je souhaite me spécialiser dans l'analyse de données marketing relationnelles. Passionné par les environnements data-driven, je m'intéresse au journey mapping, à l'analyse des frictions dans les parcours clients et à l'extraction d'insights comportementaux pour optimiser les stratégies CRM.
+      </p>
+      <p class="body-text">
+      Je développe actuellement mes compétences en algorithmes de clustering, infrastructures d'analyse ML non supervisé et identification de variables comportementales, avec un intérêt particulier pour les approches par cohorte.
+      </p>
+      <p class="body-text">
+      Je recherche aujourd'hui un rôle junior en analyse de données marketing, média ou CRM.
+      </p>
+    </section>
+
+    <!-- Profile Toggle -->
+    <section class="resume-section">
+      <h2 class="resume-sub">Profil</h2>
+      <div class="profile-switch">
+        <button class="profile-tab active" data-profile="data">Analyse Données</button>
+        <button class="profile-tab" data-profile="media">Analyse Médias</button>
+        <button class="profile-tab" data-profile="crm">Analyse CRM</button>
+      </div>
+    </section>
+
+    <!-- Graphics -->
+    <section class="resume-section">
+      <h2 class="resume-sub">Graphique</h2>
+        <canvas class="profile-graphic" id="barData" data-profile="data"></canvas>
+        <canvas class="profile-graphic" id="radarMedia" data-profile="media" hidden></canvas>
+        <canvas class="profile-graphic" id="radarCRM" data-profile="crm" hidden></canvas>
+    </section>
+
+
+    <!--- Skills --->
+<section class="resume-section">
+  <h2 class="resume-sub">Compétences</h2>
+
+  <!-- Skills : Media Analyst -->
+  <div class="profile-content" data-profile="media" hidden>
+    <div class="resume-entry">
+      <strong>Mise en place de campagnes</strong>
+      <p>(Google Ads, Meta, DV360). Junior en pacing, gestion de budget, A/B testing et ajustements en temps réel.</p>
+    </div>
+    <div class="resume-entry">
+      <strong>Segmentation d’audience</strong>
+      <p>Création de segmentations ciblées, stratégies de retargeting et activation d’audiences similaires pour scaler.</p>
+    </div>
+    <div class="resume-entry">
+      <strong>Évaluation de la performance</strong>
+      <p>Création de dashboards, suivi des indicateurs (ROAS, CPC, CPA) et mise en place de modèles d’attribution.</p>
+    </div>
+  </div>
+
+  <!-- Skills : Data Analyst -->
+  <div class="profile-content" data-profile="data" >
+    <div class="resume-entry">
+      <strong>R (Junior)</strong>
+      <p>Analyse marketing et modélisation statistique avec R. Segmentation clients, analyse de cohortes et prédiction de CLV via tidyverse et ggplot2.</p>
+    </div>
+    <div class="resume-entry">
+      <strong>Python (Junior)</strong>
+      <p>Analyse de données marketing via Pandas/NumPy et machine learning avec scikit-learn. Clustering clients, prédiction de churn et automatisation des flux data.</p>
+    </div>
+    <div class="resume-entry">
+      <strong>Data Analysis (Junior)</strong>
+      <p>Structuration et visualisation de données marketing pour extraire des insights. Analyse de cohortes, identification de tendances et reporting analytique pour optimiser les campagnes CRM.</p>
+    </div>
+  </div>
+
+  <!-- Skills : CRM Analyst -->
+  <div class="profile-content" data-profile="crm" hidden>
+    <div class="resume-entry">
+      <strong>Plateformes CRM</strong>
+      <p>Utilisation de plateformes comme Brevo ou autres pour gérer les parcours prospects et clients (pipelines).</p>
+    </div>
+    <div class="resume-entry">
+      <strong>Segmentation client</strong>
+      <p>Conception de modèles de scoring (explicites, implicites, comportementaux), analyses de clusters et priorisation des leads selon leur potentiel.</p>
+    </div>
+    <div class="resume-entry">
+      <strong>Marketing d'automation</strong>
+      <p>Mise en place et suivi de workflows automatisés et de parcours clients (scénarios email, campagnes) pour engager et convertir les leads.</p>
+    </div>
+  </div>
+</section>
+
+<!--- Work --->
+<section class="resume-section">
+  <h2 class="resume-sub">Expérience</h2>
+
+  <!-- Work : Media Analyst -->
+  <div class="profile-content" data-profile="media" hidden>
+    <div class="resume-entry">
+      <strong>Campagne Search</strong>
+      <p>Mise en place d’une campagne Google Search B2B ciblée, avec un budget de 300 €/mois. Gestion complète du projet, recherche de mots-clés, configuration, ajustements d’enchères et mise en pause des annonces peu performantes. La campagne a généré de façon constante 4 à 6 leads qualifiés par mois, avec un CPL compris entre 50 et 75 € (taux de conversion ~3 %, CPC moyen entre 2 et 3 €).</p>
+      <p><strong>Tunnel de conversion:</strong> Search Ads > compte site web (Lead) > closing direct ou en ligne (Client).</p>
+    </div>
+  </div>
+
+  <!-- Work : Data Analyst -->
+  <div class="profile-content" data-profile="data">
+    <div class="resume-entry">
+      <strong>Analyse des ventes</strong>
+      <p>Analyse exploratoire des pipelines de vente (2016–2020) à l’aide de statistiques descriptives et de visualisations pour identifier les principales catégories de produits et les tendances régionales. Résultats utilisés pour ajuster les stocks et affiner les actions marketing.</p>
+    </div>
+  </div>
+
+  <!-- Work : CRM Analyst -->
+  <div class="profile-content" data-profile="crm" hidden>
+    <div class="resume-entry">
+      <strong>Workflow CRM</strong>
+      <p>Création d’attributs CRM liés à la création de compte, à l’adhésion à un programme de fidélité, à l’historique d’achat et à la fréquence des commandes. Conception et déploiement de workflows d’emails transactionnels (création de compte, confirmation de commande, suivi de livraison, support client) via Brevo (Sendinblue).</p>
+    </div>
+  </div>
+</section>
+
+<!--- Certifications --->
+<section class="resume-section">
+  <h2 class="resume-sub">Certifications</h2>
+
+  <!-- Certification : Media Analyst -->
+  <div class="profile-content" data-profile="media" hidden>
+    <div class="resume-entry"><strong>Google Ads, Google Analytics 4 et Google Marketing Plateforms</strong><p>Foundations génerales.</p></div>
+    <div class="resume-entry"><strong>Meta Social Media Marketing Professional</strong><p>Ads Manager, Meta Business Suite, Meta Pixel.</p></div>
+    <div class="resume-entry"><strong>TikTok Media Buying Certification</strong><p>TikTok Ads Manager.</p></div>
+    <div class="resume-entry"><strong>Programmatic Advertising</strong><p>Foundations génerales.</p></div>
+  </div>
+
+  <!-- Certification : Data Analyst -->
+  <div class="profile-content" data-profile="data">
+    <div class="resume-entry"><strong>DataCamp - Marketing Analytics in R</strong><p>En cours (R, Statistiques, ML, Text Mining...).</p></div>
+    <div class="resume-entry"><strong>DataCamp - Marketing Analytics in Python</strong><p>En cours (Python, Statistiques, ML, pandas, NumPy, SciPy...).</p></div>
+    <div class="resume-entry"><strong>DataCamp - Machine Learning in Python</strong><p>En cours (Apprentissage non supervisé, profond avec PyTorch et renforcement...).</p></div>
+  </div>
+
+  <!-- Certification : CRM Analyst -->
+  <div class="profile-content" data-profile="crm" hidden>
+    <div class="resume-entry"><strong>Salesforce – Vue d’ensemble Sales & CRM</strong><p>Qualité des données, processus de vente.</p></div>
+    <div class="resume-entry"><strong>SAP Business Analyst Professional</strong><p>Modélisation de processus, analyse stratégique.</p></div>
+    <div class="resume-entry"><strong>Braze Technical Architect</strong><p>Intégration SDK, API REST, attributs, tracking des événements.</p></div>
+  </div>
+</section>
+
+    <!-- Contact -->
+    <section class="resume-block">
+      <p class="body-text">Français basé à Montréal, Canada.</p>
+      <div class="cta-group">
+        <a href="mailto:louishen@hotmail.fr" class="link">
+          louishen@hotmail.fr
+          <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7" />
+            <path d="M7 7h10v10" />
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Ton JS -->
+<script src="/js/charts/barChartData.js"></script>
+<script src="/js/charts/barChartMedia.js"></script>
+<script src="/js/charts/barChartCRM.js"></script>
+<script src="/js/ui/toggleTabs.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/analytics.js"></script>
+
+
+</body>
+</html>

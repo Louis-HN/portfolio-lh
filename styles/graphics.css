@@ -1,0 +1,61 @@
+/* ===============================
+   Canvas Container
+================================== */
+canvas {
+  background-color: var(--color-dark-bg);
+  border-radius: var(--radius-md);
+  display: block;
+  margin-inline: auto;
+  max-width: 100%;
+}
+
+/* ===============================
+   Profile Graphic Wrapper - HAUTEUR FIXE SANS DÉFORMATION
+================================== */
+
+.profile-graphic[hidden] {
+  display: none !important;
+}
+
+/* Desktop - Plus de hauteur sans aspect-ratio */
+.profile-graphic {
+  width: 100%;
+  max-width: none;
+  margin-inline: auto;
+  margin-block: var(--space-lg);
+  height: 300px; /* Hauteur fixe plus grande */
+  /* SUPPRIME aspect-ratio pour éviter les déformations */
+}
+
+canvas.profile-graphic {
+  width: 100% !important;
+  height: 300px !important; /* Hauteur fixe correspondante */
+  display: block;
+  background-color: var(--color-dark-bg);
+  border-radius: var(--radius-md);
+}
+
+/* Mobile - Hauteur adaptée sans déformation */
+@media (max-width: 768px) {
+  .profile-graphic {
+    height: 300px; /* Hauteur fixe mobile */
+    margin-block: var(--space-md);
+    width: 100%;
+  }
+
+  canvas.profile-graphic {
+    width: 100% !important;
+    height: 300px !important; /* Hauteur fixe mobile */
+  }
+}
+
+/* Très petit mobile */
+@media (max-width: 480px) {
+  .profile-graphic {
+    margin-block: var(--space-sm);
+  }
+
+  canvas.profile-graphic {
+    height: 300px !important;
+  }
+}
