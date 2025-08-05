@@ -215,6 +215,120 @@ a.link:hover .link-icon {
   margin: var(--space-lg) 0;
 }
 
+/* ===============================
+   Hero Image - Projects Pages 
+================================== */
+
+.image-hero {
+position: relative;
+width: 100%;
+height: 100vh;
+background-size: cover;
+background-repeat: no-repeat;
+display: flex;
+align-items: center;
+overflow: hidden;
+}
+
+.image-hero::before {
+content:'';
+position:absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: linear-gradient(135deg, rgba(0, 0, 0, 0.220) 0%, rgba(0, 0, 0, 0.060) 100%);
+z-index: 1;
+}
+
+.content-hero {
+position: relative;
+z-index: 2;
+color: white;
+padding: 1.5rem;
+max-width:1200px;
+width:100%; 
+margin: 0 auto;
+}
+
+.title-hero {
+font-size: 2.5rem;
+font-weight: 700;
+line-height: 1.2;
+margin-bottom: 1rem;
+letter-spacing: -0.02em;
+color: white;
+}
+
+.description-hero {
+font-size: 1rem;
+font-weight: 300;
+max-width: 600px;
+letter-spacing: -0.01em;
+color: white;
+}
+
+
+/* Optimisation pour les performances */
+.image-hero {
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+
+/* Project Page - Table design  */
+
+
+.data-table {
+  min-width: 600px; /* Ajuste en fonction de tes colonnes */
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.02);
+}
+
+.data-table thead {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.data-table th,
+.data-table td {
+  padding: 1.2rem 1rem;
+  text-align: left;
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.data-table th {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.data-table td {
+  color: #e0e0e0;
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+  transition: background 0.3s ease;
+}
+
+
+
+
+
+
 
 /* -- Darkmode -- */
 
@@ -253,7 +367,22 @@ a.link:hover {
 .resume-toolbar {
   left: calc(48% - 340px - 26px); /* -- Specifique tablette -- */
 }
+
+/* Hero Image - Projects Pages  */
+
+.content-hero {
+        padding: 0 2rem;
 }
+    
+.title-hero {
+        font-size: 4rem;
+}
+    
+.description-hero {
+        font-size: 1.25rem;
+}
+}
+
 
 
 @media (min-width: 1024px) {
@@ -278,5 +407,20 @@ a.link:hover {
 
 .profile-switch {
     padding-inline: 0;
+}
+
+
+/* Hero Image - Projects Pages  */
+
+.content-hero {
+        padding: 0 3rem;
+}
+    
+.title-hero {
+        font-size: 5rem;
+}
+    
+.description-hero {
+        font-size: 1.5rem;
 }
 }

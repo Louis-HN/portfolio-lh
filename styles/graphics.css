@@ -19,42 +19,41 @@ canvas {
   display: none !important;
 }
 
-@media (max-width: 600px) {
-  .profile-graphic {
-    aspect-ratio: unset;
-    height: 320px;
-    padding: 0 var(--space-sm);
-  }
 
-  canvas.profile-graphic {
-    height: 100% !important;
-    max-width: 100%;
-    object-fit: contain;
-  }
+/* NEW : Project Dyson */
 
-  .profile-graphic {
-    width: 100%;
-    height: 320px; /* ou ajustable selon le besoin */
-    max-width: none;
-    aspect-ratio: unset;
-  }
-}
 
-/* ===============================
-   Decorative Numbers / Labels
-================================== */
-.profile-graphic {
-  width: 100%;
-  max-width: 700px;
+.dyson-card {
+  border-radius: var(--radius-lg);
+  padding: 0;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-width: 720px;
   margin-inline: auto;
-  margin-block: var(--space-md);
-  aspect-ratio: 16 / 9;
 }
 
-canvas.profile-graphic {
-  width: 100% !important;
-  height: auto !important;
-  display: block;
-  background-color: var(--color-dark-bg);
-  border-radius: var(--radius-md);
+.dyson-card:hover {
+  transform: scale(1.02);
 }
+
+.dyson-preview {
+  width: 100%;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  margin: 0;
+}
+
+
+.label {
+  font-weight: 500;
+  color: #999;
+}
+
+.value {
+  font-weight: bold;
+}
+
+

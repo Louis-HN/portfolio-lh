@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,14 +25,6 @@
           <polyline points="15 18 9 12 15 6" />
         </svg>
       </a>
-
-      <a href="cv-louis-henon.pdf" class="download-button" download aria-label="Download resume">
-        <svg class="download-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <line x1="12" y1="3" x2="12" y2="15" />
-          <polyline points="6 11 12 17 18 11" />
-          <line x1="4" y1="22" x2="20" y2="22" />
-        </svg>
-      </a>
     </div>
     </section>
 
@@ -40,12 +32,14 @@
     <section class="resume-block">
       <div class="status-badge">Open to work! <span class="status-indicator"></span></div>
       <h1 class="resume-title">Louis Henon</h1>
-      <p class="resume-sub">Marketing orienté données</p>
+      <p class="resume-sub">Intrapreneur, Chief Marketing Officer</p>
       <p class="body-text">
-       Avec 4 ans d’expérience en tant que Marketing Manager et un diplôme d’école de commerce, je souhaite me spécialiser dans l’analyse de donnée marketing. Attiré par les environnements où la performance se pilote par les données, je m’intéresse à la création de campagnes efficaces, au suivi des indicateurs et à la prise de décision basée sur l’analyse.
+      Avec 4 ans d'expérience en coordination de projets marketing et entrepreneuriaux, je développe un approche full-stack tout en optimisant planification, budgets et ROI.
+      Alliant direction créative et pilotage data-driven, je fais collaborer efficacement les équipes et veille à l'excellence de chaque détail d'exécution.
+      Pierre angulaire entre les idées et leur réalisation, j'accompagne les projets de leur naissance jusqu'à leur succès sur le marché.
       </p>
       <p class="body-text">
-      Je recherche aujourd’hui un rôle junior en analyse média, CRM ou data marketing.
+      Je recherche aujourd'hui un rôle de coordination marketing, gestion de projets techniques ou conseil stratégique.
       </p>
     </section>
 
@@ -53,129 +47,133 @@
     <section class="resume-section">
       <h2 class="resume-sub">Profil</h2>
       <div class="profile-switch">
-        <button class="profile-tab active" data-profile="media">Analyse Média</button>
-        <button class="profile-tab" data-profile="data">Analyse Data & Programmation</button>
-        <button class="profile-tab" data-profile="crm">Analyse CRM</button>
+        <button class="profile-tab active" data-profile="media">Stratégie produit</button>
+        <button class="profile-tab" data-profile="data">Direction données</button>
+        <button class="profile-tab" data-profile="crm">Direction créative</button>
       </div>
     </section>
 
-    <!-- Graphics -->
-    <section class="resume-section">
-      <h2 class="resume-sub">Graphique</h2>
-        <canvas class="profile-graphic" id="radarMedia" data-profile="media"></canvas>
-        <canvas class="profile-graphic" id="barData" data-profile="data" hidden></canvas>
-        <canvas class="profile-graphic" id="radarCRM" data-profile="crm" hidden></canvas>
-    </section>
 
+        <!-- Projects Analysis -->
+
+
+        <!-- Strategie produit -->
+        <section class="resume-section profile-graphic" id="dyson-project" data-profile="media">
+
+          <div class="dyson-card clickable">
+              <video class="dyson-preview" autoplay loop muted playsinline>
+                <source src="/assets/product_strategy.mp4" type="video/mp4" />
+                Votre navigateur ne supporte pas la vidéo.
+              </video>
+              <div class="dyson-meta">
+                <h2 class="resume-title">Product-Market-Fit</h2>
+                <p class="body-text">
+                Expertise complète pour décrocher le Product-Market-Fit optimal et déployer une stratégie Go-to-Market performante.
+                Validation des hypothèses produit et accélération de la mise sur le marché.
+                </p>
+              </div>
+          </div>
+        </section>
+
+
+        <!-- Direction données -->
+        <section class="resume-section profile-graphic" id="on-project" data-profile="data">
+
+          <div class="dyson-card clickable">
+              <video class="dyson-preview" autoplay loop muted playsinline>
+                <source src="/assets/data_management.mp4" type="video/mp4" />
+                Votre navigateur ne supporte pas la vidéo.
+              </video>
+              <div class="dyson-meta">
+                <h2 class="resume-title">Data-Driven</h2>
+                <p class="body-text">
+                  Analyse data approfondie et pilotage des KPIs marketing pour optimiser les performances.
+                  Analytics et insights comportementaux pour transformer la donnée en décisions stratégiques clients et maximiser le ROI des campagnes.
+                </p>
+              </div>
+          </div>
+        </section>
+
+
+      <!-- Direction créative -->
+              <section class="resume-section profile-graphic" id="runwayML-project" data-profile="crm">
+
+                <div class="dyson-card clickable">
+                    <video class="dyson-preview" autoplay loop muted playsinline>
+                      <source src="/assets/creative_management.mp4" type="video/mp4" />
+                      Votre navigateur ne supporte pas la vidéo.
+                    </video>
+                    <div class="dyson-meta">
+                      <h2 class="resume-title">Brand-to-Market</h2>
+                      <p class="body-text">Création d'identité de marque différenciante et orchestration publicitaire cross-canal.
+                        Direction d'équipes créatives, UX design et content production pour déploiement omnicanal : digital, print, retail, packaging et points de vente.</p>
+                    </div>
+                </div>
+              </section>
+ 
 
     <!--- Skills --->
 <section class="resume-section">
   <h2 class="resume-sub">Compétences</h2>
 
-  <!-- Skills : Media Analyst -->
+  <!-- Skills : Strategie produit -->
   <div class="profile-content" data-profile="media">
     <div class="resume-entry">
-      <strong>Mise en place de campagnes</strong>
-      <p>(Google Ads, Meta, DV360). Junior en pacing, gestion de budget, A/B testing et ajustements en temps réel.</p>
+      <strong>Développement Produit & Marketing Mix</strong>
+      <p>Piloter le cycle produit et structurer l'offre commerciale via l'élaboration du plan marketing mix. De la conception à l'architecture d'offre pour maximiser l'adoption marché.</p>
     </div>
     <div class="resume-entry">
-      <strong>Segmentation d’audience</strong>
-      <p>Création de segmentations ciblées, stratégies de retargeting et activation d’audiences similaires pour scaler.</p>
+      <strong>Innovation & Validation Business Model</strong>
+      <p>Concevoir des propositions de valeur révolutionnaires et valider des modèles d'affaires scalables via méthodologie lean et frameworks d'intelligence marché.</p>
     </div>
     <div class="resume-entry">
-      <strong>Évaluation de la performance</strong>
-      <p>Création de dashboards (Looker Studio), suivi des indicateurs (ROAS, CPC, CPA) et mise en place de modèles d’attribution.</p>
+      <strong>Intelligence Consommateur & Mapping Concurrentiel</strong>
+      <p>Décoder les patterns comportementaux et identifier les angles morts concurrentiels pour révéler des opportunités de croissance inexploitées.</p>
+    </div>
+    <div class="resume-entry">
+      <strong>Architecture de Marque & Positionnement</strong>
+      <p>Architecturer des systèmes de marque différenciés et des stratégies de positionnement qui résonnent authentiquement avec les audiences cibles à grande échelle.</p>
     </div>
   </div>
 
-  <!-- Skills : Data Analyst -->
+  <!-- Skills : Direction données -->
   <div class="profile-content" data-profile="data" hidden>
     <div class="resume-entry">
-      <strong>SQL (Junior)</strong>
-      <p>Extraction et manipulation de données marketing structurées. Alternative scalable à Excel pour automatiser les traitements.</p>
+      <strong>Analytics & Tracking de performance</strong>
+      <p>Déploiement de systèmes de mesure en temps réel et tableaux de bord KPIs pour piloter la performance marketing avec précision et optimiser les taux de conversion.</p>
     </div>
     <div class="resume-entry">
-      <strong>Python (Junior)</strong>
-      <p>Nettoyage et analyse de données via Pandas/NumPy. Automatisation de tâches comme le scraping, les API et les flux data.</p>
+      <strong>Insights Comportementaux & Segmentation</strong>
+      <p>Analyse des parcours utilisateurs pour identifier les segments haute valeur et créer des stratégies d'activation personnalisées sur chaque point de contact client.</p>
     </div>
     <div class="resume-entry">
-      <strong>Data Analysis (Junior)</strong>
-      <p>Structuration et visualisation de données pour extraire des insights. Identification de tendances et de patterns utiles en CRM et campagnes.</p>
+      <strong>Attribution & ROI Optimisation</strong>
+      <p>Modélisation des parcours d'achat multi-canaux et optimisation budgétaire pour maximiser le retour sur investissement et prouver l'impact business des campagnes.</p>
+    </div>
+     <div class="resume-entry">
+      <strong>A/B Testing & Expérimentation Data</strong>
+      <p>Mise en place de tests et expérimentation continue pour valider les hypothèses marketing et accélérer les décisions basées sur la donnée.</p>
     </div>
   </div>
 
-  <!-- Skills : CRM Analyst -->
+  <!-- Skills : Direction créative -->
   <div class="profile-content" data-profile="crm" hidden>
     <div class="resume-entry">
-      <strong>Plateformes CRM</strong>
-      <p>Utilisation de plateformes comme Brevo ou autres pour gérer les parcours prospects et clients (pipelines).</p>
+      <strong>Production Créative à Grande Échelle</strong>
+      <p>Orchestrer des workflows créatifs haute-volume intégrant rendu 3D, motion graphics et contenu UGC avec des standards de qualité inégalés.</p>
     </div>
     <div class="resume-entry">
-      <strong>Segmentation client</strong>
-      <p>Conception de modèles de scoring (explicites, implicites, comportementaux), analyses de clusters et priorisation des leads selon leur potentiel.</p>
+      <strong>Stratégie Créative Performance</strong>
+      <p>Concevoir des concepts créatifs optimisés pour la conversion qui allient storytelling de marque et principes de marketing performance data-driven.</p>
     </div>
     <div class="resume-entry">
-      <strong>Marketing d'automation</strong>
-      <p>Mise en place et suivi de workflows automatisés et de parcours clients (scénarios email, campagnes) pour engager et convertir les leads.</p>
+      <strong>Architecture d'Expérience Digitale</strong>
+      <p>Sculpter des parcours UI/UX fluides et des design systems qui maximisent l'engagement utilisateur et génèrent un lift de conversion mesurable.</p>
     </div>
-  </div>
-</section>
-
-<!--- Work --->
-<section class="resume-section">
-  <h2 class="resume-sub">Expérience</h2>
-
-  <!-- Work : Media Analyst -->
-  <div class="profile-content" data-profile="media">
     <div class="resume-entry">
-      <strong>Campagne Search</strong>
-      <p>Mise en place d’une campagne Google Search B2B ciblée, avec un budget de 300 €/mois. Gestion complète du projet, recherche de mots-clés, configuration, ajustements d’enchères et mise en pause des annonces peu performantes. La campagne a généré de façon constante 4 à 6 leads qualifiés par mois, avec un CPL compris entre 50 et 75 € (taux de conversion ~3 %, CPC moyen entre 2 et 3 €).</p>
-      <p><strong>Tunnel de conversion:</strong> Search Ads > compte site web (Lead) > closing direct ou en ligne (Client).</p>
+      <strong>Engine de Testing AI & Optimisation Créative</strong>
+      <p>Déployer des frameworks de testing créatif systématiques avec Midjourney et améliorer continuellement les métriques de performance publicitaire.</p>
     </div>
-  </div>
-
-  <!-- Work : Data Analyst -->
-  <div class="profile-content" data-profile="data" hidden>
-    <div class="resume-entry">
-      <strong>Analyse des ventes</strong>
-      <p>Analyse exploratoire des pipelines de vente (2016–2020) à l’aide de statistiques descriptives et de visualisations pour identifier les principales catégories de produits et les tendances régionales. Résultats utilisés pour ajuster les stocks et affiner les actions marketing.</p>
-    </div>
-  </div>
-
-  <!-- Work : CRM Analyst -->
-  <div class="profile-content" data-profile="crm" hidden>
-    <div class="resume-entry">
-      <strong>Workflow CRM</strong>
-      <p>Création d’attributs CRM liés à la création de compte, à l’adhésion à un programme de fidélité, à l’historique d’achat et à la fréquence des commandes. Conception et déploiement de workflows d’emails transactionnels (création de compte, confirmation de commande, suivi de livraison, support client) via Brevo (Sendinblue).</p>
-    </div>
-  </div>
-</section>
-
-<!--- Certifications --->
-<section class="resume-section">
-  <h2 class="resume-sub">Certifications</h2>
-
-  <!-- Certification : Media Analyst -->
-  <div class="profile-content" data-profile="media">
-    <div class="resume-entry"><strong>Google Ads, Google Analytics 4 and Google Marketing Plateforms</strong><p>Certifié en juin 2025.</p></div>
-    <div class="resume-entry"><strong>Google Digital Marketing & E-commerce Professional</strong><p>En cours.</p></div>
-    <div class="resume-entry"><strong>Meta Social Media Marketing Professional</strong><p>En cours.</p></div>
-    <div class="resume-entry"><strong>TikTok Media Buying Certification</strong><p>En cours.</p></div>
-    <div class="resume-entry"><strong>Programmatic Advertising</strong><p>En cours.</p></div>
-  </div>
-
-  <!-- Certification : Data Analyst -->
-  <div class="profile-content" data-profile="data" hidden>
-    <div class="resume-entry"><strong>Meta Marketing Analytics</strong><p>En cours (Framework OSEMN, SQL, Python, Google Sheets et dashboards).</p></div>
-    <div class="resume-entry"><strong>Foundations of Business and Marketing analytics</strong><p>En cours (Statistiques, R, techniques d’analyse comme la régression, la classification et le clustering).</p></div>
-    <div class="resume-entry"><strong>Certificate in Applied Computer Science</strong><p>Prévu en septembre, cours du soir (Programmation et structures de données).</p></div>
-  </div>
-
-  <!-- Certification : CRM Analyst -->
-  <div class="profile-content" data-profile="crm" hidden>
-    <div class="resume-entry"><strong>Salesforce – Vue d’ensemble Sales & CRM</strong><p>En cours (qualité des données, processus de vente).</p></div>
-    <div class="resume-entry"><strong>SAP Business Analyst Professional</strong><p>En cours (modélisation de processus, analyse stratégique).</p></div>
-    <div class="resume-entry"><strong>Braze Technical Architect</strong><p>En cours (intégration SDK, API REST, attributs, tracking des événements).</p></div>
   </div>
 </section>
 
@@ -184,7 +182,7 @@
       <p class="body-text">Français basé à Montréal, Canada.</p>
       <div class="cta-group">
         <a href="mailto:louishen@hotmail.fr" class="link">
-          Discutons ensemble
+          louishen@hotmail.fr
           <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
             <path d="M7 17L17 7" />
             <path d="M7 7h10v10" />
@@ -204,6 +202,8 @@
 <script src="/js/charts/barChartCRM.js"></script>
 <script src="/js/ui/toggleTabs.js"></script>
 <script src="/js/main.js"></script>
+<script src="/js/analytics.js"></script>
+
 
 
 </body>

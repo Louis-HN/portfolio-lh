@@ -8,7 +8,6 @@
   padding-inline: var(--space-md);
 }
 
-
 .container {
   width: 100%;
   max-width: 1200px;
@@ -66,7 +65,7 @@
 
 .resume-entry {
   margin-bottom: var(--space-md);
-  font-size: var (--font-base);
+  font-size: var(--font-base);
 }
 
 .resume-entry strong {
@@ -107,6 +106,23 @@
   }
 
 
+/* =============================
+   Project Pages
+============================= */
+
+.container-project {
+padding-top: var(--space-xl);
+padding-left: var(--space-md);
+padding-right: var(--space-md);
+}
+
+.full-width-section{
+width: 100vw;
+margin-left: calc(-50vw + 50%);
+
+}
+
+
 
 /* =============================
    Base Reset & Transition
@@ -132,6 +148,7 @@ body {
 @keyframes fadeIn {
   to { opacity: 1; }
 }
+
 
 
 /* ================================
@@ -169,6 +186,13 @@ body {
 /* =============================
    Dark Mode
 ============================= */
+
+.dark-mode {
+  background: linear-gradient(to bottom, #0a0a0a, #121212);
+  color: #e0e0e0;
+}
+
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: var(--color-dark-bg);
@@ -212,6 +236,7 @@ body {
   .cta-group {
     flex-direction: row;
   }
+
 }
 
 
@@ -250,4 +275,5 @@ body {
   .cta-group {
     flex-direction: row;
   }
+
 }
