@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
 
+  <!-- Preload première vidéo visible -->
+  <link rel="preload" as="video" href="https://res.cloudinary.com/dlb7yfgfq/video/upload/f_auto,q_auto,w_800,c_scale/product_strategy_smweuu.mp4">
+
   <title>Expertises</title>
 
   <link rel="stylesheet" href="/styles/tokens.css" />
@@ -61,7 +64,10 @@
         <section class="resume-section profile-graphic" id="dyson-project" data-profile="media">
 
           <div class="dyson-card clickable">
-              <video class="dyson-preview" autoplay loop muted playsinline>
+              <video class="dyson-preview" autoplay loop muted playsinline loading="lazy" preload="none">
+              <!-- Mobile 640px -->
+              <source media="(max-width: 768px)" src="https://res.cloudinary.com/dlb7yfgfq/video/upload/f_auto,q_auto,w_640,c_scale/product_strategy_smweuu.mp4" type="video/mp4">
+              <!-- Desktop 1280px -->
               <source src="https://res.cloudinary.com/dlb7yfgfq/video/upload/f_auto,q_auto,w_1280,c_scale/product_strategy_smweuu.mp4" type="video/mp4">
               </video>
               <div class="dyson-meta">
@@ -80,9 +86,12 @@
         <section class="resume-section profile-graphic" id="on-project" data-profile="data">
 
           <div class="dyson-card clickable">
-              <video class="dyson-preview" autoplay loop muted playsinline>
-              <source src="https://res.cloudinary.com/dlb7yfgfq/video/upload/f_auto,q_auto,w_1280,c_scale/data_management_rlivdn.mp4" type="video/mp4">
-              </video>
+            <video class="dyson-preview" autoplay loop muted playsinline loading="lazy" preload="none">
+            <!-- Mobile 640px -->
+            <source media="(max-width: 768px)" src="https://res.cloudinary.com/dlb7yfgfq/video/upload/f_auto,q_auto,w_640,c_scale/data_management_rlivdn.mp4" type="video/mp4">
+            <!-- Desktop 1280px -->
+            <source src="https://res.cloudinary.com/dlb7yfgfq/video/upload/f_auto,q_auto,w_1280,c_scale/data_management_rlivdn.mp4" type="video/mp4">
+            </video>
               <div class="dyson-meta">
                 <strong class="body-text" style="font-weight: 300;">Focus on</strong>
                 <h2 class="resume-title">Data-Driven</h2>
@@ -97,9 +106,12 @@
 
       <!-- Direction créative -->
               <section class="resume-section profile-graphic" id="runwayML-project" data-profile="crm">
-
+                
                 <div class="dyson-card clickable">
-                    <video class="dyson-preview" autoplay loop muted playsinline>
+                    <video class="dyson-preview" autoplay loop muted playsinline loading="lazy" preload="none">
+                    <!-- Mobile 640px -->
+                    <source media="(max-width: 768px)" src="https://res.cloudinary.com/dlb7yfgfq/video/upload/f_auto,q_auto,w_640,c_scale/creative_management_gpwpkb.mp4" type="video/mp4">
+                    <!-- Desktop 1280px -->
                     <source src="https://res.cloudinary.com/dlb7yfgfq/video/upload/f_auto,q_auto,w_1280,c_scale/creative_management_gpwpkb.mp4" type="video/mp4">
                     </video>
                     <div class="dyson-meta">
@@ -203,8 +215,7 @@
 <script src="/js/ui/toggleTabs.js"></script>
 <script src="/js/main.js"></script>
 <script src="js/analytics.js"></script>
-
-
+<script src="js/video-optimizer.js"></script>
 
 </body>
 </html>
