@@ -1,6 +1,11 @@
-/* -- Mobile-First -- */
 
-/* === Containers === */
+/* ==========================================================================
+   Layout UI - Mobile-First, Containers, Sections, Resume, Home, etc.
+   ========================================================================== */
+
+/* ===============================
+   Containers and Sections
+================================== */
 
 .home-container {
   width: 100%;
@@ -107,49 +112,34 @@
 
 
 /* =============================
-   Project Pages
+   Dark Mode
 ============================= */
 
-.container-project {
-padding-top: var(--space-xl);
-padding-left: var(--space-md);
-padding-right: var(--space-md);
-}
-
-.full-width-section{
-width: 100vw;
-margin-left: calc(-50vw + 50%);
-
+.dark-mode {
+  background: linear-gradient(to bottom, #0a0a0a, #121212);
+  color: #e0e0e0;
 }
 
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--color-dark-bg);
+    color: var(--color-text);
+  }
 
-/* =============================
-   Base Reset & Transition
-============================= */
+  .resume-section {
+    border-color: var(--color-border);
+  }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: var(--color-light-bg);
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-base);
-  color: var(--color-text);
-  line-height: var(--line-height-base);
-  opacity: 0;
-  animation: fadeIn 0.75s ease-out forwards;
-}
-
-/* Smooth reveal */
-@keyframes fadeIn {
-  to { opacity: 1; }
+  .resume-entry strong {
+    color: var(--color-primary);
+  }
 }
 
 
+/* ===============================
+  Responsive scaling (Tablet & Desktop)
+================================== */
 
 /* ================================
    Desktop Centered Layout (≥768px)
@@ -180,35 +170,6 @@ body {
     padding-inline: var(--space-md);
   }
 }
-
-
-  
-/* =============================
-   Dark Mode
-============================= */
-
-.dark-mode {
-  background: linear-gradient(to bottom, #0a0a0a, #121212);
-  color: #e0e0e0;
-}
-
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--color-dark-bg);
-    color: var(--color-text);
-  }
-
-  .resume-section {
-    border-color: var(--color-border);
-  }
-
-  .resume-entry strong {
-    color: var(--color-primary);
-  }
-}
-
-
 
 /* -- Responsive scaling (Tablet & Desktop) -- */
 
@@ -260,18 +221,6 @@ body {
     padding-inline: var(--space-lg);
   }
 
-  .home-section {
-    padding-left: var(--space-xl); /* -- TEST -- */
-  }
-
-  .home-skills-section {
-    padding-left: var(--space-xl);
-    font-size: 1rem; /* -- TEST -- */
-  }
-  .sub-title {
-    padding-left: var(--space-xl); /* -- TEST -- */
-    font-size: 1rem;
-  }
   .cta-group {
     flex-direction: row;
   }

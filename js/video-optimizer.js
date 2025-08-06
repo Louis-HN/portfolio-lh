@@ -1,4 +1,4 @@
-// Dans un nouveau fichier js/videoOptimizer.js
+
 const videoObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {

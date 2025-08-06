@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Components UI - Buttons, Tabs, Toolbar, Graphics, Badges, etc.
+   Components UI - Mobile-First, Buttons, Tabs, Toolbar, Graphics, Badges, etc.
    ========================================================================== */
 
 /* ===============================
@@ -277,60 +277,9 @@ color: white;
 }
 
 
-/* Project Page - Table design  */
-
-
-.data-table {
-  min-width: 600px; /* Ajuste en fonction de tes colonnes */
-  width: 100%;
-  border-collapse: collapse;
-  margin: 2rem 0;
-  background: rgba(255, 255, 255, 0.02);
-  border-radius: 12px;
-  overflow: hidden;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.02);
-}
-
-.data-table thead {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.data-table th,
-.data-table td {
-  padding: 1.2rem 1rem;
-  text-align: left;
-  font-size: 0.95rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.data-table th {
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  color: #ffffff;
-  text-transform: uppercase;
-}
-
-.data-table td {
-  color: #e0e0e0;
-}
-
-.data-table tr:last-child td {
-  border-bottom: none;
-}
-
-.data-table tr:hover {
-  background-color: rgba(255, 255, 255, 0.03);
-  transition: background 0.3s ease;
-}
-
-
-
-
-
-
-
-/* -- Darkmode -- */
+/* ===============================
+  Darkmode
+================================== */
 
 
 @media (prefers-color-scheme: dark) {
@@ -339,9 +288,9 @@ color: white;
   }
 }
 
-
-
-/* -- Responsive scaling (Tablet & Desktop) -- */
+/* ===============================
+  Responsive scaling (Tablet & Desktop)
+================================== */
 
 @media (min-width: 600px) {
   .status-badge {
