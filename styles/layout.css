@@ -79,6 +79,7 @@
   font-size: var(--font-base);
 }
 
+
 /* === Offset Utility === */
 .section-offset-top {
   margin-top: var(--space-xxl);
