@@ -93,7 +93,7 @@
   margin-left: 0;
   margin-right: 0;
   padding-top: var(--space-xl);
-  padding-bottom: var(--space-xxl);
+  padding-bottom: var(--space-lg);
   padding-left: 0;
   padding-right: 0;
 }
@@ -105,6 +105,22 @@
     align-items: left;
     margin-top: var(--space-s);
   }
+
+
+.image-profil-section {
+  margin-top: var(--space-xxs);
+  margin-bottom: var(--space-xs);
+  width: 100%;
+}
+
+.image-profil {
+width:70%;
+height:auto;
+}
+
+
+
+
 
 
 /* =============================
@@ -179,6 +195,11 @@ body {
   .text-block {
     text-align: justify;
     padding-inline: var(--space-md);
+  }
+
+  .image-profil {
+    width: 35%;
+    height: auto;
   }
 }
 
@@ -275,6 +296,11 @@ body {
   }
   .cta-group {
     flex-direction: row;
+  }
+
+  .image-profil {
+    width: 35%;
+    height: auto;
   }
 
 }
