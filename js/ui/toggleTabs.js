@@ -15,10 +15,6 @@ function initProfileTabs() {
     graphics.forEach(graph => {
       graph.hidden = graph.dataset.profile !== profile;
     });
-
-    if (profile === 'media') renderMediaChart();
-    if (profile === 'data') renderDataChart();
-    if (profile === 'crm') renderCRMChart();
   };
 
   const defaultTab = document.querySelector('.profile-tab.active') || tabs[0];
